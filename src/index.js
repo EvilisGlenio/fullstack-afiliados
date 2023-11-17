@@ -2,8 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    return res.send('Hello Wolrd')
-});
+app.use(express.json())
+
+app.use(require("./routes"))
 
 app.listen(3000);
