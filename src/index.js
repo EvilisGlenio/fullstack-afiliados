@@ -4,6 +4,8 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 
+const HOST = "0.0.0.0";
+
 const app = express();
 
 /**
@@ -19,4 +21,4 @@ app.use(morgan("dev")); // log lib
 
 app.use(require("./routes"));
 
-app.listen(3000);
+app.listen(3000, HOST);
